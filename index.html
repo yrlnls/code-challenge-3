@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flat Dango</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ui container">
+        <h2 class="ui header">Flat Dango</h2>
+        <div class="ui grid">
+            <div class="four wide column">
+                <h3>Available Movies</h3>
+                <ul class="ui divided list" id="films"></ul>
+            </div>
+            <div class="eight wide column">
+                <div class="ui card" id="showing">
+                    <div class="image">
+                        <img id="poster" src="assets/placeholderImage.png" alt="[MOVIE TITLE]">
+                    </div>
+                    <div class="content">
+                        <div id="title" class="header">[MOVIE TITLE]</div>
+                        <div id="runtime" class="meta">[RUNTIME] minutes</div>
+                        <div class="description">
+                            <div id="film-info">[INSERT MOVIE DESCRIPTION HERE]</div>
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <span id="showtime" class="ui label">[SHOWTIME]</span>
+                        <span id="ticket-num">[X]</span> remaining tickets
+                    </div>
+                    <div class="extra content">
+                        <button id="buy-ticket" class="ui orange button">Buy Ticket</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

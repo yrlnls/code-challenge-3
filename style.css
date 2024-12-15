@@ -1,0 +1,34 @@
+/* style.css */
+body {
+    background-color: #f9f9f9;
+}
+
+.ui.card {
+    margin-top: 20px;
+}
+
+.ui.header {
+    margin-bottom: 20px;
+}
+
+#poster {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.ui.button {
+    width: 100%;
+}
+
+.ui.list .item:hover {
+    background-color: pink;
+    cursor: pointer;
+}
+
+.ui.button {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.ui.button:hover {
+    background-color: #d68a00;
+}
