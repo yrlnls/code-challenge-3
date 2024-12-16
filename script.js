@@ -43,24 +43,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Add event listener for buying tickets
             buyTicketButton.onclick = function () {
-                buyTicket(movie.id);
+                buyTicket(movie.id, movie.tickets_sold);
             };
         }
     }
 
     // Function to buy a ticket
-    function buyTicket(movieId) {
+    function buyTicket(movieId, currentTicketsSold) {
         fetch(`${baseURL}films/${movieId}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ tickets_sold: 1 }),
+            body: JSON.stringify({ tickets_sold: currentTicketsSold + 1 }),
         })
         .then(response => response.json())
         .then(updatedMovie => {
             displayMovieDetails(updatedMovie);
-            alert('Ticket purchased successfully!');
         })
         .catch(error => {
             console.error('Error purchasing ticket:', error);
@@ -77,6 +76,11 @@ document.addEventListener('DOMContentLoaded', function () {
             listItem.onclick = () => displayMovieDetails(movie);
             filmsList.appendChild(listItem);
         });
+
+        // Display the first movie's details by default
+        if (movies.length > 0) {
+            displayMovieDetails(movies[0]);
+        }
     }
 
     // Fetch and display movies on page load
