@@ -1,34 +1,67 @@
-/* style.css */
+/* General body styles */
 body {
-    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif; 
+    background-color: #f9f9f9; 
+    margin: 0; 
+    padding: 20px; 
 }
 
-.ui.card {
-    margin-top: 20px;
-}
-
+/* Header styles */
 .ui.header {
-    margin-bottom: 20px;
+    text-align: center; 
+    color: white; 
+    background-color:black;
 }
 
+
+/* Styles for the movie list */
+#films {
+    max-height: 400px; 
+    overflow-y: auto; 
+}
+
+/* Styles for each movie item in the list */
+.item {
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+/* Change background color on hover for movie items */
+.item:hover {
+    background-color: orange; 
+}
+
+/* Card styles for displaying movie details */
+.ui.card {
+    margin-top: 20px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Styles for the movie poster image */
 #poster {
-    max-height: 300px;
-    object-fit: cover;
+    width: 100%; 
+    height: auto; 
 }
 
-.ui.button {
-    width: 100%;
+/* Styles for the button */
+.ui.orange.button {
+    width: 100%; 
+    font-size: 1.2em; 
 }
 
-.ui.list .item:hover {
-    background-color: pink;
-    cursor: pointer;
+/* Styles for the success message */
+#success-message {
+    margin-top: 10px; 
 }
 
-.ui.button {
-    transition: background-color 0.3s ease-in-out;
+/* Label styles for showtime */
+.ui.label {
+    background-color: #ffcc00; 
+    color: #000; 
 }
 
-.ui.button:hover {
-    background-color: #d68a00;
+/* Styles for remaining tickets display */
+#ticket-num {
+    font-weight: bold; 
+    color: #d9534f; 
 }

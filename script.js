@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const filmsList = document.getElementById('films');
-    const baseURL = 'http://localhost:3000/'; // Adjust this if needed
+    const baseURL = 'http://localhost:3000/'; 
 
     // Function to fetch movie data
     function fetchMovieData() {
