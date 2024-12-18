@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,45 +8,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="ui container">
-        <!-- Main header for the application -->
-        <h2 class="ui header">
-            <i class="orange ticket icon"></i> 
-            <div class="content">FLATDANGO</div>
-        <div class="sub header" id="subtitle">BUY MOVIE TICKETS</div>
-        </h2>
-        <div class="ui grid">
-            <div class="four wide column">
-                <!-- Section for displaying available movies list -->
+    <!-- Main header for the application -->
+    <header>
+        <i class="orange ticket icon"></i>
+        <h1>FLATDANGO</h1>
+        <h2>BUY YOUR MOVIE TICKETS NOW!!!!</h2>
+    </header>
+
+    <div class="ui grid">
+        <div class="four wide column">
+            <aside>
                 <h3>Available Movies</h3>
                 <ul class="ui divided list" id="films"></ul>
-            </div>
-            <div class="eight wide column">
-                <!-- Section for displaying movie details -->
-                <div class="ui card" id="showing">
-                    <div class="image">
-                        <img id="poster" src="assets/placeholderImage.png" alt="[MOVIE TITLE]">
-                    </div>
-                    <div id="success-message" class="ui positive message" style="display: none;"></div>
-                    <div class="content">
-                        <div id="title" class="header">[MOVIE TITLE]</div>
-                        <div id="runtime" class="meta">[RUNTIME] minutes</div>
-                        <div class="description">
-                            <div id="film-info">[INSERT MOVIE DESCRIPTION HERE]</div>
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <span id="showtime" class="ui label">[SHOWTIME]</span>
-                        <span id="ticket-num">[X]</span> remaining tickets
-                    </div>
-                    <div class="extra content">
-                        <button id="buy-ticket" class="ui orange button">Buy Ticket</button>
-                    </div>
+            </aside>
+        </div>
+        <div class="eight wide column">
+            <!-- Section for displaying movie details -->
+            <div id="movie-details" class="movie-details">
+                <img id="poster" src="" alt="Movie Poster">
+                <div class="movie-info">
+                    <h2 id="title"></h2>
+                    <p id="description"></p>
+                    <span id="runtime"></span>
+                    <br>
+                    <span id="showtime"></span>
+                    <br>
+                    <span id="available-tickets"></span>
+                    <button id="buy-ticket" class="ui orange button">Buy Ticket</button>
                 </div>
             </div>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
